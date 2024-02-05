@@ -67,12 +67,12 @@ const quizData = [
 
     {
         questao: "Como verificar se uma variável é do tipo string em JavaScript?",
-        opcoes: ["<if (typeof x == "str")>", "<if (typeOf x == "string")>", "<if (typeof x === "string")>", "<if (x.type === "string")>"],
-        resposta: "<if (typeof x === "string")>"
+        opcoes: ["<if (typeof x == str)>", "<if (typeOf x == string)>", "<if (typeof x === string)>", "<if (x.type === string)>"],
+        resposta: "<if (typeof x === string)>"
     },
 
     {
-        questao: "Qual é a forma correta de escrever um loop "for" em JavaScript?",
+        questao: "Qual é a forma correta de escrever um loop for em JavaScript?",
         opcoes: ["<for (i = 0; i < 10; i++) {...}>", "<for (i = 0; i < 10) {...}>", "<loop (i = 0; i < 10; i++) {...}>", "<for (i < 10; i++) {...}>"],
         resposta: "<for (i = 0; i < 10; i++) {...}>"
     },
@@ -84,11 +84,11 @@ const quizData = [
     },
     
         //ADICIONE AS PERGUNTAS De Git 5 PERGUNTAS
-        { question: 'X?',
-        options: ['X', 'X', 'X', 'X'],
-        correctAnswer: 'X'},
+    { question: 'X?',
+    options: ['X', 'X', 'X', 'X'],
+    correctAnswer: 'X'},
         
-        { question: 'X?',
+    { question: 'X?',
     options: ['X', 'X', 'X', 'X'],
     correctAnswer: 'X'},
     
