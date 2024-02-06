@@ -1,0 +1,15 @@
+body{
+    background-color: aquamarine;
+
+
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    background-color: red;
+}
