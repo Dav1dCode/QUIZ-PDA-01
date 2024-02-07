@@ -1,15 +1,36 @@
 body{
     background-color: aquamarine;
 
-
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
 
 main{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100vh;
 }
 
 article{
-    background-color: red;
+    background-color: yellow;
+
+    width: 20rem;
+    height: 25rem;
+    border: 1px solid black;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.participantes ul{
+    padding: 0;
 }

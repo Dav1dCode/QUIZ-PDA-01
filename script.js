@@ -26,6 +26,21 @@ function exibirPergunta(perguntaObj) {
     mostraTentativas();
 }
 
-quizData.forEach((pergunta) => {
+//função para emabralhar os arrays
+function embaralharArray(array) { 
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+// Criei uma cópia do array original contendo apenas as perguntas
+const perguntasArray = quizData.filter(item => 'questao' in item);
+
+// Embaralhei apenas as perguntas
+embaralharArray(perguntasArray);
+
+// Interei sobre as perguntas embaralhadas usando forEach
+perguntasArray.forEach((pergunta) => {
     exibirPergunta(pergunta);
 });
