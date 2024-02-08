@@ -32,25 +32,30 @@ const quizData = [
 
     // DADOS DAS PERGUNTAS CSS
 
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { questao: "Qual é a propriedade CSS utilizada para alterar a cor do texto?",
+    opcoes: ["text-color", "font-color", "color", "text-style"], 
+    resposta: "color"
+},
 
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { questao: "Como podemos selecionar todos os elementos <p> em um documento HTML usando CSS?",
+    opcoes: ["p {}", ".p {}", "#p {}", "paragraph {}"], 
+    resposta: "p {}"
+},
 
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { questao: "Qual é a propriedade CSS usada para definir a margem interna de um elemento?",
+    opcoes: ["padding", "margin", "inner-margin", "spacing"], 
+    resposta: "padding"
+},
 
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { questao: "Como podemos centralizar um elemento horizontalmente em CSS?",
+    opcoes: ["align: center;", "text-align: center;", "margin: auto;", "horizontal-align: center;"], 
+    resposta: "margin: auto;"
+},
 
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { questao: "Qual é a propriedade CSS utilizada para adicionar uma sombra a um texto?",
+    opcoes: ["shadow: text;", "text-shadow: 2px 2px 4px #000;", "box-shadow: text;", "text-effect: shadow;"], 
+    resposta: "text-shadow: 2px 2px 4px #000;"
+},
 
 // DADOS DAS PERGUNTAS JAVASCRIPT-ok
     {
