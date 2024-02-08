@@ -16,16 +16,17 @@ function exibirPergunta(perguntaObj) {
         alert('Resposta correta!');
 
         tentativasCorretas += 1;
-        console.log(tentativasCorretas);
-        return true;
+        
     } else {
         alert('Resposta incorreta. A resposta correta é: ' + perguntaObj.resposta);
-        return false;
+      
     }
 
     tentativas += 1;
-    console.log(tentativas);
+
     mostraTentativas();
+
+    return respostaUsuario === perguntaObj.resposta;
 }
 
 //função para emabralhar os arrays
