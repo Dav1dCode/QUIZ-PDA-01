@@ -89,21 +89,21 @@ const quizData = [
     },
     
         //ADICIONE AS PERGUNTAS De Git 5 PERGUNTAS
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { question: 'Qual comando do git é usado pra incializar um novo repositório?',
+    options: ['git init', 'git commit', 'git add', 'git status'],
+    correctAnswer: 'git init'},
         
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { question: 'Qual comando do git é usado para verificar o status do repositório?',
+    options: ['git add', 'git commit', 'git status', 'git init'],
+    correctAnswer: 'git status'},
     
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { question: 'Qual comando do git é usado pra criar um novo commiit com as alterações adicionadas?',
+    options: ['git add', 'git commit', 'git init', 'git status'],
+    correctAnswer: 'git commit'},
     
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { question: 'Qual comando do git é usado para adicionar arquivos ao índice para prepará-los para serem commitados?',
+    options: ['git add', 'git commit', 'git init', 'git status'],
+    correctAnswer: 'git add'},
     
     { question: 'X?',
     options: ['X', 'X', 'X', 'X'],
