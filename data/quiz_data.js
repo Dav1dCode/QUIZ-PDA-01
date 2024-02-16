@@ -105,9 +105,9 @@ const quizData = [
     options: ['git add', 'git commit', 'git init', 'git status'],
     correctAnswer: 'git add'},
     
-    { question: 'X?',
-    options: ['X', 'X', 'X', 'X'],
-    correctAnswer: 'X'},
+    { question: 'Como desfazer as últimas alterações no Git, descartando as modificações no diretório de trabalho??',
+    options: ['git revert', 'git reset --hard', 'git branch -d', 'git tag'],
+    correctAnswer: 'git reset --hard'},
 ]
 
 export default quizData;
