@@ -37,7 +37,6 @@ function embaralharArray(array) {
     }
 }
 
-tentativas += 1;
 
 // Criei uma cópia do array original contendo apenas as perguntas
 const perguntasArray = quizData.filter(item => 'questao' in item);
@@ -54,6 +53,5 @@ for (let i = 0; i < perguntasArray.length; i++) {
         break;  // Encerra o loop se o usuário errar
     }
 
-    tentativas += 1;
     mostraTentativas();
 }
