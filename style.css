@@ -11,6 +11,7 @@ body {
 main{
 display: flex;
 align-items: center;
+flex-direction: column;
 justify-content: space-around;
 
 height: 100vh;
@@ -53,4 +54,10 @@ padding: 0;
 li{
 font-size: 20px;
 padding: 10px;
+}
+
+@media screen and (max-width: 500px){
+    .participantes{
+        display: none;
+    }
 }
