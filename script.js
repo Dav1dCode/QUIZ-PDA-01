@@ -10,23 +10,24 @@ function mostraTentativas() {
 }
 
 function exibirPergunta(perguntaObj) {
-    while (true) {
+    let respostaCorreta = false;
+
+    while (!respostaCorreta) {
         const respostaUsuario = prompt(perguntaObj.questao + '\n' + perguntaObj.opcoes.join('\n'));
 
         if (respostaUsuario === perguntaObj.resposta) {
             alert('Resposta correta!');
-            tentativasCorretas += 1;
-            break; // Se a resposta estiver correta, sai do loop
+            tentativasCorretas++;
+            respostaCorreta = true;
         } else {
             alert('Resposta incorreta. A resposta correta é: ' + perguntaObj.resposta);
-            tentativas += 1;
+            tentativas++;
             mostraTentativas();
-            return false; // Se a resposta estiver incorreta, retorna false
         }
     }
-    tentativas += 1;
+
+    tentativas++;
     mostraTentativas();
-    return true;
 }
 
 // Função para embaralhar os arrays
@@ -46,25 +47,18 @@ embaralharArray(perguntasArray);
 // Itero sobre as perguntas embaralhadas usando forEach
 for (let i = 0; i < perguntasArray.length; i++) {
     const pergunta = perguntasArray[i];
-
-    if (!exibirPergunta(pergunta)) {
-        alert('Você errou! O quiz será encerrado.');
-        break; // Encerra o loop se o usuário errar
-    }
+    exibirPergunta(pergunta);
 }
+
+alert('Você concluiu o quiz!');
 
 function runQuiz() {
     let pontuacao = 0;
-    let i = 0;
 
-    while (i < quizData.length) {
+    for (let i = 0; i < quizData.length; i++) {
         const respostaUsuario = prompt(quizData[i].questao + "\n" + quizData[i].opcoes.join("\n") + "\nSua resposta: ");
         if (respostaUsuario && respostaUsuario.toLowerCase() === quizData[i].resposta.toLowerCase()) {
             pontuacao++;
-            i++;
-        } else {
-            i = 0; // Retorna para a primeira pergunta
-            pontuacao = 0; // Zera a pontuação
         }
     }
 
