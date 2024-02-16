@@ -49,5 +49,5 @@ for (let i = 0; i < perguntasArray.length; i++) {
     exibirPergunta(pergunta);
 }
 
-alert('Você concluiu o quiz!');
-mostraTentativas(); // Exibe o número de tentativas após o término do quiz
+// Após o término do quiz, exibe o número de tentativas corretas e incorretas
+mostraTentativas();
