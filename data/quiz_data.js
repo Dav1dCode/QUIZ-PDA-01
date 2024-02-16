@@ -85,7 +85,7 @@ const quizData = [
     {
         questao: "Como você declara uma função em JavaScript?",
         opcoes: ["<function minhaFuncao() => {...}>", "<function minhaFuncao(): {...}>", "<minhaFuncao = function() {...}>", "<def minhaFuncao() {...}>"],
-        resposta: "<for (i = 0; i < 10; i++) {...}>"
+        resposta: "minhaFuncao = function() {...}>"
     },
     
         //ADICIONE AS PERGUNTAS De Git 5 PERGUNTAS
