@@ -15,15 +15,18 @@ function exibirPergunta(perguntaObj) {
     if (respostaUsuario === perguntaObj.resposta) {
         alert('Resposta correta!');
 
-        tentativasCorretas += 1;
-        console.log(tentativasCorretas);
+        tentativasCorretas ++;
     } else {
         alert('Resposta incorreta. A resposta correta é: ' + perguntaObj.resposta);
+       
     }
 
-    tentativas += 1;
-    console.log(tentativas);
+    tentativas ++;
+
     mostraTentativas();
+
+    return respostaUsuario === perguntaObj.resposta;
+
 }
 
 //função para emabralhar os arrays
@@ -34,6 +37,8 @@ function embaralharArray(array) {
     }
 }
 
+tentativas += 1;
+
 // Criei uma cópia do array original contendo apenas as perguntas
 const perguntasArray = quizData.filter(item => 'questao' in item);
 
@@ -41,6 +46,14 @@ const perguntasArray = quizData.filter(item => 'questao' in item);
 embaralharArray(perguntasArray);
 
 // Interei sobre as perguntas embaralhadas usando forEach
-perguntasArray.forEach((pergunta) => {
-    exibirPergunta(pergunta);
-});
+for (let i = 0; i < perguntasArray.length; i++) {
+    const pergunta = perguntasArray[i];
+
+    if (!exibirPergunta(pergunta)) {
+        alert('Você errou! O quiz será encerrado.');
+        break;  // Encerra o loop se o usuário errar
+    }
+
+    tentativas += 1;
+    mostraTentativas();
+}
