@@ -22,12 +22,11 @@ function exibirPergunta(perguntaObj) {
         } else {
             alert('Resposta incorreta. A resposta correta é: ' + perguntaObj.resposta);
             tentativas++;
-            mostraTentativas();
+            mostraTentativas(); // Mostra tentativas após cada resposta (incluindo as incorretas)
         }
     }
 
-    tentativas++;
-    mostraTentativas();
+    tentativas++; // Aumenta as tentativas após uma resposta correta
 }
 
 // Função para embaralhar os arrays
@@ -51,18 +50,4 @@ for (let i = 0; i < perguntasArray.length; i++) {
 }
 
 alert('Você concluiu o quiz!');
-
-function runQuiz() {
-    let pontuacao = 0;
-
-    for (let i = 0; i < quizData.length; i++) {
-        const respostaUsuario = prompt(quizData[i].questao + "\n" + quizData[i].opcoes.join("\n") + "\nSua resposta: ");
-        if (respostaUsuario && respostaUsuario.toLowerCase() === quizData[i].resposta.toLowerCase()) {
-            pontuacao++;
-        }
-    }
-
-    alert("Pontuação final: " + pontuacao);
-}
-
-runQuiz();
+mostraTentativas(); // Exibe o número de tentativas após o término do quiz
