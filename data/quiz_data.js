@@ -109,5 +109,24 @@ const quizData = [
     options: ['git revert', 'git reset --hard', 'git branch -d', 'git tag'],
     correctAnswer: 'git reset --hard'},
 ]
+function runQuiz() {
+    let pontuacao = 0;
+    let i = 0;
+
+    while (i < quizData.length) {
+        const respostaUsuario = prompt(quizData[i].questao + "\n" + quizData[i].opcoes.join("\n") + "\nSua resposta: ");
+        if (respostaUsuario && respostaUsuario.toLowerCase() === quizData[i].resposta.toLowerCase()) {
+            pontuacao++;
+            i++;
+        } else {
+            i = 0; // Retorna para a primeira pergunta
+            pontuacao = 0; // Zera a pontuação
+        }
+    }
+
+    alert("Pontuação final: " + pontuacao);
+}
+
+runQuiz();
 
 export default quizData;
